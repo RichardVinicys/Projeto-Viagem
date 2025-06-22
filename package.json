@@ -1,0 +1,37 @@
+{
+  "name": "projeto-viagem",
+  "version": "1.0.0",
+  "description": "Projeto de estudo em Node.js que permite aos usuários criar uma conta e cadastrar pontos turísticos em um mapa — lugares que já visitaram ou que pretendem conhecer.",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardVinicys/Projeto-Viagem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RichardVinicys/Projeto-Viagem/issues"
+  },
+  "homepage": "https://github.com/RichardVinicys/Projeto-Viagem#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.16.0",
+    "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

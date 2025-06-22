@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/fundo-do-ceu-azul-com-nuvens_336924-3507.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu{
+    background-color: #AEE4EC;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 20px
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.sideLeft, .sideRight{
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    
+}
+.menu a:hover{
+    background-color: #7FD3E0;
+    border-radius: 5px;
+}
+
+.rotate-diagonal {
+  transform: rotate(45deg); 
+  display: inline-block;
+  padding: 8px;  
+}
+
+main{
+    margin: 7% auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 150vb;
+    height: auto;
+    color: #9B83D1;
+}
+
+h1{
+    font-size: 58px;
+    color: #6A4DB8;
+    margin-left: 5%;
+    padding: 10px;
+}
+
+div{
+    display: flex;
+}
+section{
+    margin: 5%;
+}
+
+section h2{
+   padding: 10px 0;
+}
