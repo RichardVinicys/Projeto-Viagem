@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/Login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <div class="sideLeft">
+                    <li><a href="/"><i class="bi bi-airplane-fill rotate-diagonal text-warning"></i>Inicio</a></li>
+                </div>
+                <div class="sideRight">
+                    <li><a href="/cadastro">Realizar Login</a></li>
+                    <li><a href="">Cadastrar Ponto</a></li>
+                    <li><a href="">Visualizar Mapa</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+
+            <section class="login">
+                <h2>Login</h2>
+                <form action="">
+                    <label for="">Email:</label>
+                    <input type="email">
+                    <label for="">Senha:</label>
+                    <input type="password">
+                    <button>Login</button>
+                </form>
+            </section>
+
+            <section class="cadastro oculta">
+                <h2>Cadastro</h2>
+                <form action="">
+                    <label for="">Nome:</label>
+                    <input type="text">
+                    <label for="">Email:</label>
+                    <input type="email">
+                    <label for="">Senha:</label>
+                    <input type="password">
+                    <label for="">Confirma Senha:</label>
+                    <input type="password">
+                    <button>Cadastra-se</button>
+                </form>
+
+            </section>
+
+
+            <section class="info-side">
+                    <p class="info-text">Se não tem conta,<br> cadastre-se</p>
+                    <button id="info-btn">Cadastra-se</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>

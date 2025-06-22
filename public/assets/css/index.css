@@ -52,6 +52,7 @@ main{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     max-width: 150vb;
     height: auto;
+    border-radius: 18px;
     color: #9B83D1;
 }
 
