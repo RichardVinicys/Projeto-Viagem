@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/fundo-do-ceu-azul-com-nuvens_336924-3507.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    background-color: #AEE4EC;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 20px
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.sideLeft,
+.sideRight {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+
+}
+
+.menu a:hover {
+    background-color: #7FD3E0;
+    border-radius: 5px;
+}
+
+.rotate-diagonal {
+    transform: rotate(45deg);
+    display: inline-block;
+    padding: 8px;
+}
+
+
+section {
+    margin: 3% auto ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 150vb;
+    height: auto;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+
+
+h2 {
+    margin: 3% auto;
+    color: #6A4DB8;
+}
+
+div {
+    display: flex;
+}
+
+#map { 
+    height: 380px;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+.lista{
+    background-color: #AEE4EC;
+}
+
+#mapas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+#mapas li {
+    color: #6A4DB8;
+}
+
+
