@@ -71,16 +71,12 @@ div {
     display: flex;
 }
 
-.login,
-.cadastro {
-    width: 80%;
+.login {
+    width: 70%;
     padding: 20px;
     border-right: 1px solid #7AB6BC;
 }
 
-.oculta {
-    display: none;
-}
 
 form {
     display: flex;
@@ -95,7 +91,7 @@ form input{
 }
 
 form input,
-button {
+button, select {
     display: block;
     width: 85%;
     height: 35px;
@@ -111,15 +107,13 @@ button:hover {
     transform: scale(1.1);
 }
 
-.info-side {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
+.info-img {
+    width: 30%;
+    background-image: url(../img/bussola.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-.info-side p {
-    text-align: center;
-}
+
+
 

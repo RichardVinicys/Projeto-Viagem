@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/pontos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <div class="sideLeft">
+                    <li><a href="/"><i class="bi bi-airplane-fill rotate-diagonal text-warning"></i>Inicio</a></li>
+                </div>
+                <div class="sideRight">
+                    <li><a href="/cadastro">Realizar Login</a></li>
+                    <li><a href="">Cadastrar Ponto</a></li>
+                    <li><a href="">Visualizar Mapa</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+
+            <section class="login">
+                <h2>Cadastar Ponto</h2>
+                <form id="form">
+                    <label>Nome</label>
+                    <input type="text" name="nome" required />
+                    <label>Endereço</label>
+                    <input type="text" name="endereco" required />
+                    <label for="pet-select">Selecione</label>
+
+                    <select name="option">
+                        <option value="">--Selecione uma opção--</option>
+                        <option value="visita">Já visitei</option>
+                        <option value="viaja">Predendo Visitar </option>
+                    </select>
+                        <label>Latitude</label>
+                        <input type="number" step="any" name="lat" required />
+                        <label>Longitude</label>
+                        <input type="number" step="any" name="lng" required>
+
+                        <button type="submit">Cadastrar</button>
+                </form>
+            </section>
+
+            <section class="info-img">
+            </section>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
