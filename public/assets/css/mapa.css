@@ -13,7 +13,7 @@ body {
 
 .menu {
     background-color: #AEE4EC;
-    padding: 10px 20px;
+    padding: 15px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-size: 20px
 }
@@ -84,12 +84,13 @@ div {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
 }
 
 #mapas li {
     color: #6A4DB8;
+    font-size: 2em;
 }
 
 

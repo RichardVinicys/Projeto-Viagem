@@ -13,7 +13,7 @@ body {
 
 .menu {
     background-color: #AEE4EC;
-    padding: 10px 20px;
+    padding: 15px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-size: 20px
 }
@@ -44,16 +44,21 @@ body {
     border-radius: 5px;
 }
 
-.rotate-diagonal {
-    transform: rotate(45deg);
-    display: inline-block;
-    padding: 8px;
+h1,
+p {
+    text-align: center;
+    padding: 10px;
+
+}
+
+section p {
+    text-align: left;
 }
 
 main {
-    margin: 7% auto;
+    margin: 5% auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    max-width: 150vb;
+    max-width: 140vb;
     height: auto;
     border-radius: 18px;
     background-color: #AEE4EC;
@@ -73,34 +78,36 @@ div {
 
 .login,
 .cadastro {
-    width: 80%;
+    width: 50%;
     padding: 20px;
-    border-right: 1px solid #7AB6BC;
+    
 }
 
-.oculta {
-    display: none;
+
+.cadastro{
+    border-right: 1px solid #7AB6BC;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow: hidden ;
+    overflow: hidden;
     padding: 10px;
+    text-align: left;
 }
 
-form input{
+form input {
     padding: 20px;
 }
 
 form input,
 button {
     display: block;
-    width: 85%;
+    width: 100%;
     height: 35px;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     color: #6A4DB8;
 }
 
@@ -111,15 +118,17 @@ button:hover {
     transform: scale(1.1);
 }
 
-.info-side {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-}
-.info-side p {
-    text-align: center;
+
+.sucesso {
+    background-color: #c3e6cb;
+    color: #2f6846;
+    padding: 10px;
+    border-radius: 5px;
 }
 
+.erro {
+    background-color: #f5c6cb;
+    color: #a94442;
+    padding: 10px;
+    border-radius: 5px;
+}

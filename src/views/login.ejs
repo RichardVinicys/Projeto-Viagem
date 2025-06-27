@@ -14,51 +14,71 @@
         <nav class="menu">
             <ul>
                 <div class="sideLeft">
-                    <li><a href="/"><i class="bi bi-airplane-fill rotate-diagonal text-warning"></i>Inicio</a></li>
+                    <li><a href="/">Inicio</a></li>
                 </div>
                 <div class="sideRight">
-                    <li><a href="/cadastro">Realizar Login</a></li>
+                    <%if(user) {%>
                     <li><a href="/ponto">Cadastrar Ponto</a></li>
                     <li><a href="/mapa">Visualizar Mapa</a></li>
+                       <li><a href="/logout">Logout</a></li>
+                    <% } else{ %> 
+                        <li><a href="/cadastro">Realizar Login</a></li>
+                        <%}%>
                 </div>
             </ul>
         </nav>
     </header>
     <main>
+        <h1>Criar Conta ou Entrar</h1>
+        <p>Faça ou crie sua conta abaixo</p>
+
+        <%if(errors.length > 0 ) {%>
+            <%errors.forEach(erro => {%>
+                <p class="erro"><%= erro %></p><br>
+            <%})%>  
+        <%}%>
+
+        <%if(success.length > 0 ) {%>
+            <%success.forEach(success => {%>
+                <p class="sucesso"><%= success %></p><br>
+            <%})%>  
+        <%}%>
+
+        
+        
         <div>
 
-            <section class="login">
-                <h2>Login</h2>
-                <form action="">
-                    <label for="">Email</label>
-                    <input type="email">
-                    <label for="">Senha</label>
-                    <input type="password">
-                    <button>Login</button>
-                </form>
-            </section>
+            <section class="cadastro">
+                <h2>Fça seu Cadastro</h2>
+                <p>Se você ainda nao tem conta, preencha o formulario abaixo.</p>
 
-            <section class="cadastro oculta">
-                <h2>Cadastro</h2>
-                <form action="">
-                    <label for="">Nome</label>
-                    <input type="text">
-                    <label for="">Email</label>
-                    <input type="email">
-                    <label for="">Senha</label>
-                    <input type="password">
-                    <label for="">Confirma Senha:</label>
-                    <input type="password">
+                <form action="/cadastro/cadastro" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="nome">
+                    <label>Email</label>
+                    <input type="email" name="email">
+                    <label>Senha</label>
+                    <input type="password" name="password">
                     <button>Cadastra-se</button>
                 </form>
 
             </section>
 
-
-            <section class="info-side">
-                    <p class="info-text">Se não tem conta,<br> cadastre-se</p>
-                    <button id="info-btn">Cadastra-se</button>
+            <section class="login">
+                <h2>Faça seu Login</h2>
+                <p>Se você já tem conta, faça login abaixo.</p>
+                <form action="/cadastro/login" method="post">
+                    <label for="">Email</label>
+                    <input type="email" name="email">
+                    <label for="">Senha</label>
+                    <input type="password" name="password">
+                    <button>Login</button>
+                </form>
             </section>
+
+
+
+
         </div>
     </main>
 

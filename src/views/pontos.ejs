@@ -10,16 +10,20 @@
 </head>
 
 <body>
-    <header>
+        <header>
         <nav class="menu">
             <ul>
                 <div class="sideLeft">
-                    <li><a href="/"><i class="bi bi-airplane-fill rotate-diagonal text-warning"></i>Inicio</a></li>
+                    <li><a href="/">Inicio</a></li>
                 </div>
                 <div class="sideRight">
-                    <li><a href="/cadastro">Realizar Login</a></li>
+                    <%if(user) {%>
                     <li><a href="/ponto">Cadastrar Ponto</a></li>
                     <li><a href="/mapa">Visualizar Mapa</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <% } else{ %> 
+                        <li><a href="/cadastro">Realizar Login</a></li>
+                        <%}%>
                 </div>
             </ul>
         </nav>

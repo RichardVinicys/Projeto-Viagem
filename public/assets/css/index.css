@@ -10,9 +10,9 @@ body{
     background-repeat: no-repeat;
 }
 
-.menu{
+.menu {
     background-color: #AEE4EC;
-    padding: 10px 20px;
+    padding: 15px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-size: 20px
 }
@@ -48,7 +48,7 @@ body{
 }
 
 main{
-    margin: 7% auto;
+    margin: 5% auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     max-width: 150vb;
     height: auto;
