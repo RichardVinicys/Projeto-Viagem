@@ -27,7 +27,7 @@ exports.pontos = async (req, res) => {
 
     } catch (e) {
         console.log(e)
-        res.send(`ERROR 404`)
+        res.render('404')
     }
 
 
@@ -51,7 +51,7 @@ exports.editIndex = async (req, res) => {
 
     }catch(e){
         console.log(e)
-        res.send('Error 404')
+        res.render('404')
     }
 
 }

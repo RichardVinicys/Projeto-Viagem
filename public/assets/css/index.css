@@ -73,3 +73,7 @@ section{
 section h2{
    padding: 10px 0;
 }
+
+video{
+    border: 1px solid red;
+}

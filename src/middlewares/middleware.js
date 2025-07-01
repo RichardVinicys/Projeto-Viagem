@@ -7,7 +7,7 @@ exports.msgMiddleware = (req, res, next) =>{
 
 exports.loginRequire = (req, res, next) =>{
     if(!req.session.user){
-        return res.send('vai pra onde negao')
+        return res.render('logado')
     }
     next()
 }

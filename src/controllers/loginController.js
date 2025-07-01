@@ -23,7 +23,7 @@ exports.cadastro = async (req, res) => {
         })
     } catch (e) {
         console.log(e)
-        res.send(`ERROR 404`)
+        res.render('404')
     }
 
 }
@@ -50,7 +50,7 @@ exports.login = async (req, res) => {
 
     } catch (e) {
         console.log(e)
-        res.send(`ERROR 404`)
+        res.render('404')
     }
 
 }
