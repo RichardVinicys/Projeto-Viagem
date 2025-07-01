@@ -76,21 +76,28 @@ div {
     border: 1px solid red;
     border-radius: 20px;
 }
-.lista{
-    background-color: #AEE4EC;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
 }
 
-#mapas{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
 }
 
-#mapas li {
-    color: #6A4DB8;
-    font-size: 2em;
+table tr td a{
+    text-decoration: none;
 }
 
+.excluir {
+  color: red;
+}
 
+.editar{
+    color: blue;
+}

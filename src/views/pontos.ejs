@@ -10,7 +10,7 @@
 </head>
 
 <body>
-        <header>
+    <header>
         <nav class="menu">
             <ul>
                 <div class="sideLeft">
@@ -18,12 +18,12 @@
                 </div>
                 <div class="sideRight">
                     <%if(user) {%>
-                    <li><a href="/ponto">Cadastrar Ponto</a></li>
-                    <li><a href="/mapa">Visualizar Mapa</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                    <% } else{ %> 
-                        <li><a href="/cadastro">Realizar Login</a></li>
-                        <%}%>
+                        <li><a href="/ponto">Cadastrar Ponto</a></li>
+                        <li><a href="/mapa">Visualizar Mapa</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        <% } else{ %>
+                            <li><a href="/cadastro">Realizar Login</a></li>
+                            <%}%>
                 </div>
             </ul>
         </nav>
@@ -32,26 +32,37 @@
         <div>
 
             <section class="login">
-                <h2>Cadastar Ponto</h2>
-                <form id="form">
-                    <label>Nome</label>
-                    <input type="text" name="nome" required />
-                    <label>Endereço</label>
-                    <input type="text" name="endereco" required />
-                    <label for="pet-select">Selecione</label>
+                <%if(ponto._id) {%>
+                    <h2>Editando Ponto</h2>
+                    <%} else {%>
+                        <h2>Cadastrando Ponto</h2>
+                        <%}%>
+                            <%- include('./mensagem')%>
+                                <%if(ponto._id) {%>
+                                    <form action="/ponto/edit/<%= ponto._id %>" method="post">
+                                        <% } else {%>
+                                            <form action="/ponto/cadastro" method="post">
+                                                <%}%>
+                                                    <label>Nome</label>
+                                                    <input type="text" name="nome" value="<%= ponto.nome %>" />
+                                                    <label>Endereço</label>
+                                                    <input type="text" name="endereco" value="<%= ponto.endereco %>" />
+                                                    <label>Selecione</label>
+                                                    <select name="status" class="form-control">
+                                                        <option value="">--Selecione uma opção--</option>
+                                                        <option value="Ja Visitei" <%=ponto &&
+                                                            ponto.status==='Ja Visitei' ? 'selected' : '' %>>Já visitei
+                                                        </option>
+                                                        <option value="Pretendo Visitar" <%=ponto &&
+                                                            ponto.status==='Pretendo Visitar' ? 'selected' : '' %>
+                                                            >Pretendo Visitar</option>
+                                                    </select>
 
-                    <select name="option">
-                        <option value="">--Selecione uma opção--</option>
-                        <option value="visita">Já visitei</option>
-                        <option value="viaja">Predendo Visitar </option>
-                    </select>
-                        <label>Latitude</label>
-                        <input type="number" step="any" name="lat" required />
-                        <label>Longitude</label>
-                        <input type="number" step="any" name="lng" required>
+                                                    <label for="">Coordenadas</label>
+                                                    <input type="text" name="coordenada" value="<%=ponto.coordenada%>">
 
-                        <button type="submit">Cadastrar</button>
-                </form>
+                                                    <button type="submit">Cadastrar</button>
+                                            </form>
             </section>
 
             <section class="info-img">

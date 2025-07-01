@@ -1,0 +1,11 @@
+<%if(errors.length > 0 ) {%>
+            <%errors.forEach(erro => {%>
+                <p class="erro"><%= erro %></p><br>
+            <%})%>  
+        <%}%>
+
+        <%if(success.length > 0 ) {%>
+            <%success.forEach(success => {%>
+                <p class="sucesso"><%= success %></p><br>
+            <%})%>  
+        <%}%>

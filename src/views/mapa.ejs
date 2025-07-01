@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/mapa.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <title>Document</title>
 </head>
 
 <body>
-     <header>
+    <header>
         <nav class="menu">
             <ul>
                 <div class="sideLeft">
@@ -21,12 +19,12 @@
                 </div>
                 <div class="sideRight">
                     <%if(user) {%>
-                    <li><a href="/ponto">Cadastrar Ponto</a></li>
-                    <li><a href="/mapa">Visualizar Mapa</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                    <% } else{ %> 
-                        <li><a href="/cadastro">Realizar Login</a></li>
-                        <%}%>
+                        <li><a href="/ponto">Cadastrar Ponto</a></li>
+                        <li><a href="/mapa">Visualizar Mapa</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        <% } else{ %>
+                            <li><a href="/cadastro">Realizar Login</a></li>
+                            <%}%>
                 </div>
             </ul>
         </nav>
@@ -34,34 +32,42 @@
 
     <main>
         <section>
-            <h2>Bem vindo</h2>
+            <h2>Bem vindo, <%= user.nome %>!
+            </h2>
             <div id="map"></div>
 
 
         </section>
         <section class="lista">
 
-            <ul id="mapas">
-                <li> Nome Endereço Opcçao Latitude Longitude <i class="bi bi-trash"></i> <i
-                        class="bi bi-pencil-square"></i>
-                </li>
-                <li> Nome Endereço Opcçao Latitude Longitude <i class="bi bi-trash"></i> <i
-                        class="bi bi-pencil-square"></i>
-                </li>
-                <li> Nome Endereço Opcçao Latitude Longitude <i class="bi bi-trash"></i> <i
-                        class="bi bi-pencil-square"></i>
-                </li>
-                <li> Nome Endereço Opcçao Latitude Longitude <i class="bi bi-trash"></i> <i
-                        class="bi bi-pencil-square"></i>
-                </li>
-                <li> Nome Endereço Opcçao Latitude Longitude <i class="bi bi-trash"></i> <i
-                        class="bi bi-pencil-square"></i>
-                </li>
-            </ul>
+            <% if(pontos.length> 0) {%>
+                <table>
+                    <% pontos.forEach(ponto=> { %>
+
+                        <tr>
+                            <td>
+                                <%= ponto.nome %>
+                            </td>
+                            <td>
+                                <%= ponto.endereco %>
+                            </td>
+                            <td>
+                                <%= ponto.status %>
+                            </td>
+                            <td>
+                                <%= ponto.coordenada%>
+                            </td>
+                            <td><a href="/ponto/index/<%=ponto._id%>" class="editar">Editar</a></td>
+                            <td><a href="/ponto/delete/<%=ponto._id%>" class="excluir">Excluir</a></td>
+                        </tr>
+                        <% }) %>
+                </table>
+                <% } else { %>
+                    <h2>Nehum Ponto Cadastrado</h2>
+                    <%}%>
         </section>
     </main>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="/assets/js/mapa.js"></script>
 </body>
 

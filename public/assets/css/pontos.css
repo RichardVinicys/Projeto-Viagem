@@ -53,14 +53,12 @@ body {
 main {
     margin: 5% auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    max-width: 150vb;
+    max-width: 140vb;
     height: auto;
     border-radius: 18px;
     background-color: #AEE4EC;
     color: #9B83D1;
 }
-
-
 
 h2 {
     margin: 3% auto;
@@ -76,7 +74,6 @@ div {
     padding: 20px;
     border-right: 1px solid #7AB6BC;
 }
-
 
 form {
     display: flex;
@@ -96,7 +93,7 @@ button, select {
     width: 85%;
     height: 35px;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     color: #6A4DB8;
 }
 
@@ -115,5 +112,16 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+.sucesso {
+    background-color: #c3e6cb;
+    color: #2f6846;
+    padding: 10px;
+    border-radius: 5px;
+}
 
-
+.erro {
+    background-color: #f5c6cb;
+    color: #a94442;
+    padding: 10px;
+    border-radius: 5px;
+}

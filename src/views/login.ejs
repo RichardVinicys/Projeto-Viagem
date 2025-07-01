@@ -32,17 +32,7 @@
         <h1>Criar Conta ou Entrar</h1>
         <p>Faça ou crie sua conta abaixo</p>
 
-        <%if(errors.length > 0 ) {%>
-            <%errors.forEach(erro => {%>
-                <p class="erro"><%= erro %></p><br>
-            <%})%>  
-        <%}%>
-
-        <%if(success.length > 0 ) {%>
-            <%success.forEach(success => {%>
-                <p class="sucesso"><%= success %></p><br>
-            <%})%>  
-        <%}%>
+        <%- include('./mensagem')%>
 
         
         
@@ -81,8 +71,6 @@
 
         </div>
     </main>
-
-    <script src="/assets/js/login.js"></script>
 </body>
 
 </html>
