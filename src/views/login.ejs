@@ -43,6 +43,7 @@
                 <p>Se você ainda nao tem conta, preencha o formulario abaixo.</p>
 
                 <form action="/cadastro/cadastro" method="post">
+                    <input type="hidden" name="_csrf" value=<%= csrfToken %>>
                     <label>Nome</label>
                     <input type="text" name="nome">
                     <label>Email</label>
@@ -58,6 +59,7 @@
                 <h2>Faça seu Login</h2>
                 <p>Se você já tem conta, faça login abaixo.</p>
                 <form action="/cadastro/login" method="post">
+                    <input type="hidden" name="_csrf" value= <%= csrfToken %>>
                     <label for="">Email</label>
                     <input type="email" name="email">
                     <label for="">Senha</label>

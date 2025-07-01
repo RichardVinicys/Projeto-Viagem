@@ -29,7 +29,8 @@ const path = require('path');
 const routes = require('./routes')
 const helmet = require('helmet')
 const flash = require('connect-flash')
-const { msgMiddleware } = require('./src/middlewares/middleware')
+const { msgMiddleware, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware')
+const csrf = require('csurf')
 
 
 
@@ -55,7 +56,12 @@ app.use(helmet({
 }));
 app.use(sessionOption)
 app.use(flash())
+
+app.use(csrf())
+
 app.use(msgMiddleware)
+app.use(checkCsrfError)
+app.use(csrfMiddleware)
 app.use(routes);
 app.use(express.static(path.resolve(__dirname, 'public')));
 
